@@ -1,0 +1,181 @@
+<html>
+   <head>
+   <title>
+   home </title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style> 
+	  h1 { 
+	  margin-top: 0px;
+	  margin-bottom: 0px;
+	  text-align:center;
+	  font-size:35pt;
+	  background-color:black;
+	  color:white;
+	  }
+	  a{
+	  color:blue;
+	  }
+	  .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+  align:middle;
+}
+
+.column {
+  float: left;
+  width: 40%;
+  padding: 0 50px;
+}
+
+.row {margin: 0 -5px;
+align: middle;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding-bottom: 50px
+  }
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+	padding-left: 50px;
+  }
+}
+
+.AllCards{
+align: middle;
+}
+	
+	img {
+	height:350px;
+	align:middle;
+	}
+	
+	.top-container {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+.header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+</style>
+    </head>
+	<body>
+	<div id="myHeader">
+	<h1> Welcom To Our Home Page</h1>
+	</div>
+	<!-- <img src=".\Images\duble.jpg" alt="Italian Trulli"> <p> <center> <big>  double bedroom </big></center></p> -->
+	<div class="w3-sidebar w3-bar-block w3-black w3-xxlarge" style="width:70px">
+  <a href="home.html" class="w3-bar-item w3-button"><i class="fa fa-home"></i></a> 
+  <a href="https://www.google.com" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a> 
+  <a href="signin.html" class="w3-bar-item w3-button"><i class="fa fa-sign-out"></i></a> 
+</div>
+	<div style="margin-left:300px; align:center">
+	<div class="row">
+	<div class="column">
+	<a href="https://www.cntraveler.com/hotels/united-states/san-francisco/hotel-nikko-san-francisco?epik=dj0yJnU9cUpLOFNBRmlzZ25lMU5BWjBSX2V5TEJDaUphemxpMmYmcD0wJm49aTVoU2RxbjZEcDJwUW5PWnNJMzlOQSZ0PUFBQUFBR2RmWjNz">
+	<div class="card">
+  <img src=".\Images\duble.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>double bedroom</b></h4>
+    <p>60$ per night</p>
+  </div>
+</div>
+</a>
+</div>
+<div class="column">
+<a href="https://www.wallpaper.com/travel/best-urban-hotels-2015-the-shortlist#123933">
+<div class="card" >
+  <img src=".\Images\52d6854d6fb0c27718c347f34e5e861d.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>see viwe</b></h4>
+    <p>150$ per night</p>
+  </div>
+</div>
+</a>
+</div>
+</div>
+
+<div class="row">
+<!-- <div class="cloumn"> -->
+<!-- <div class="card"> -->
+  <!-- <img src=".\Images\duble.jpg" alt="Avatar" style="width:100%"> -->
+  <!-- <div class="container"> -->
+    <!-- <h4><b>double bedroom</b></h4> -->
+    <!-- <p>60$ per night</p> -->
+  <!-- </div> -->
+<!-- </div> -->
+<!-- </div> -->
+<div class="column">
+<a href="https://divisare.com/projects/345130-blvd-hyatt-place-hotel-luoyang">
+<div class="card">
+  <img src=".\Images\21609cfda6ee6f208aa436c5e0b180e5.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>privet bedroom</b></h4>
+    <p>80$ per night</p>
+  </div>
+</div>
+</a>
+</div>
+
+<div class="column">
+<a href="https://www.marriott.com/en-us/hotels/yyzxr-the-st-regis-toronto/photos/?epik=dj0yJnU9clp2Wmo4WHpuLW0wSkd3R3ZsNVhJZkdVVkdDYUMxdDkmcD0wJm49V0pjakVIc3hrNzNCczFsQUNSdkFTZyZ0PUFBQUFBR2RmYVo0">
+<div class="card">
+  <img src=".\Images\2b827539fbf8dd07b57e6fd53a78bac2.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>in the city bedroom</b></h4>
+    <p>50$ per night</p>
+  </div>
+</div>
+</a>
+</div>
+</div>
+</div>
+	</body>
+	<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+</html>

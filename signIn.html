@@ -1,0 +1,85 @@
+<html>
+   <head>
+   <title>
+   signin </title>
+      <style> 
+	  h1 { 
+	  text-align:center;
+	  	  background-color:black;
+	  color:white;
+	  }
+	 .SignInForm {
+  float: middle;
+  height: 370px;
+  width: 400px;
+  margin-left: 38%;
+  margin-top: 100px;
+ justify-content: center;
+  align-items: center;
+  border: 3px solid #f1f1f1;
+
+}
+
+*{box-sizing: border-box;}
+input[type=text], input[type=password] {
+  width: 75%;
+  padding: 15px;
+  margin: 5px 20 22px 10;
+  margin-right: 20px;
+  border: none;
+  background: #f1f1f1;
+}
+.btn {
+  background-color: black;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 75%;
+  margin-left: 50px;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.btn:hover {
+  opacity: 3;
+}
+</style>
+</head>
+   
+	<body>
+	
+	<div class="SignInForm">
+	<h1> signin </h1>
+	<form ID="fr"  action="">
+	<label style= "margin-left: 10px"><b>NAME/USERNAME</b></label> <input type="text" id = "UserName" name="textcompany" placeholder="Enter Username" size='10' maxlength='15'> <br>
+	<Br>
+	<label style= "margin-left: 10px"><b>PASSWORD</b></label> <input type="PASSWORD" id = "Password" name="pwdlogin" placeholder="Enter Password" size='10'maxlength='15'> <BR>
+	<Br>
+	<input class = "btn" type="submit" value="submit">
+	</form>
+	</div>
+	<center>
+	<a href="signup.html" > Create Account </a>
+	</center>
+	<script language="javascript">
+	 
+	document.getElementById("fr").addEventListener("submit", myFnction, false);
+	
+	function myFnction(event){
+	event.preventDefault();
+	var userInput = document.getElementById("UserName").value;
+	var userPass = document.getElementById("Password").value;
+	console.log(userInput);
+	if(userInput == localStorage.getItem("storedUserName") && userPass == localStorage.getItem("storedPassword"))
+	{
+		window.location.href = "home.html"
+	}
+	else{
+	alert("Invalid username or password");
+	}
+
+	
+	}
+	</script>
+	</body>
+</html>

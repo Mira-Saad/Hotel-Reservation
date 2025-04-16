@@ -1,0 +1,97 @@
+<html>
+<head>
+<title> singup</title>
+</head>
+<style>
+h1 {
+text-align:center;
+font-size:35pt;
+	  background-color:black;
+	  color:white;
+}
+
+
+	 .SignUpForm {
+  float: middle;
+  height: 600px;
+  width: 400px;
+  margin-left: 38%;
+  margin-top: 100px;
+ justify-content: center;
+  align-items: center;
+  border: 3px solid #f1f1f1;
+
+}
+
+*{box-sizing: border-box;}
+input[type=text], input[type=password], input[type=date] {
+  width: 75%;
+  padding: 15px;
+  margin: 5px 20 22px 10;
+  margin-right: 20px;
+  border: none;
+  background: #f1f1f1;
+}
+.btn {
+  background-color: black;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 75%;
+  margin-left: 50px;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.btn:hover {
+  opacity: 3;
+}
+</style>
+<body>
+<div class="SignUpForm">
+<h1> signup </h1>
+<form ID="fr"  action="home.html">
+	<label style= "margin-left: 10px"><b>NAME/USERNAME</b></label>
+	<input type="text" id = "UserName" name="textcompany" placeholder="Enter Username" size='10' maxlength='15'>
+	<br>
+	<label style= "margin-left: 10px"><b>PASSWORD</b></label> 
+	<input type="password" id="psw" name="psw" placeholder="Enter Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+	<br>
+	<label style= "margin-left: 10px"><b>RETYPE PASSWORD</b></label> 
+	<input type="password" id="psw" name="psw" placeholder="Re-Enter Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+	<br>
+	<label for="birthday" style= "margin-left: 10px "><b>Birthday</b></label> 
+	<input type="date" id="birthday" name="birthday" >
+	<br>
+	<input class = "btn" type="submit" value="submit">
+	<input class = "btn" style="background-color: red" type="reset" name="cmdreset" value="reset"> <br>
+</form>
+</div>
+
+	<center>
+	<a href="signin.html" > Log In </a>
+	</center>
+
+<script language="javascript">
+document.getElementById("fr").addEventListener("submit", myFunction, false);
+function myFunction(event){
+event.preventDefault();
+	
+	console.log("In");
+	
+	var userName = document.getElementById("UserName").value;
+localStorage.setItem("storedUserName",userName);
+
+	var password = document.getElementById("psw").value;
+localStorage.setItem("storedPassword",password);
+
+	var birthday = document.getElementById("birthday").value;
+localStorage.setItem("storedBirthday",birthday);
+
+	window.location.href = "signin.html"
+	}
+	</script>
+
+
+</body>
+</html>
